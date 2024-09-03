@@ -1,0 +1,27 @@
+import React from "react";
+
+const CategoryForm = ({handleSubmit,value,setValue}) => {
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group mb-3">
+          
+          <input
+            type="text"
+            className="form-control"
+            value={value}
+            placeholder="enter new category"
+            onChange={(e)=>setValue(e.target.value)}
+          />
+          
+        </div>
+        
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </>
+  );
+};
+
+export default CategoryForm;
